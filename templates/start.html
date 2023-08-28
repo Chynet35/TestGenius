@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start Exam</title>
+</head>
+<body>
+    <h1>Welcome, {{ name }}!</h1>
+    <p>Category: {{ category }}</p>
+    <p>Type: {{ type }}</p>
+    <p>Difficulty: {{ difficulty }}</p>
+    <a href="{{ url_for('startexam', name=name) }}">Start the Exam</a>
+</body>
+</html>

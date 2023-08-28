@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam</title>
+</head>
+<body>
+    <h1>Exam - {{ name }}</h1>
+    <form action="#" method="post">
+        {% for question in questions %}
+            <h3>{{ question.question }}</h3>
+            <ul>
+                {% for option in question.incorrect_answers %}
+                    <li><input type="radio" name="{{ question.question }}" value="{{ option }}"> {{ option }}</li>
+                {% endfor %}
+                <li><input type="radio" name="{{ question.question }}" value="{{ question.correct_answer }}"> {{ question.correct_answer }}</li>
+            </ul>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
